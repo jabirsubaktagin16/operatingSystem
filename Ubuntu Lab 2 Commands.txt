@@ -1,0 +1,46 @@
+* sudo adduser 'user name' 				-> Add User
+* sudo groupadd 'group name' 			-> Add Group
+* groups 						-> Groups in Current User
+* groups 'user name' 				-> Groups in Specific User
+* id 						-> Check Id
+* id 'user name' 					-> Check Id in Specific User
+* sudo usermod -a -G 'group name' 'user name' 		-> Converting Group Into Secondary
+
+## sudo is also a group name
+## sudo usermod -a -G sudo 'user name' is correct
+
+* sudo usermod -g -A 'group name' 'user name' 		-> Converting Group Into Primary
+* sudo chown 'new owner/user' 'file name' 		-> New Ownership for File
+* sudo chown -R 'new owner/user' 'Directory name' 	-> New Ownership for Directory
+* sudo chgrp 'user name' 'file name' 			-> Change Group For File
+* sudo chgrp -R 'user name' 'Directory name' 		-> Change Group For Directory
+* sudo groupdel 'group name' 			-> Group Delete
+
+## Primary Group Cannot be deleted
+
+* sudo userdel 'user name' 				-> User Delete
+* find -mtime -'days' -ls				-> Checking Modification of Recent Days
+* find path -mtime -'days' -ls				-> Checking Modification of Recent Days of Specific Location
+* find -name '*'					-> Showing All Directories Under Current Directory
+* find -name 'Directory Name'				-> Showing Specfic Directory Under Current Directory
+* find path -name '*'					-> Showing All Directories Under Specific Directory
+* find -type f 					-> Showing File Types
+* find -type d 					-> Showing Directory Types
+* find -name '*.file type'				-> Show All That File Types
+* find -name 'name*'				-> Show All Files that are similar to name
+* uniq
+* sort 'file name' | uniq -ic				-> 
+* sort 'file name' | uniq -icu				-> 
+* sort 'file name' | uniq -icd				-> Unique Duplicate Count
+* grep 'word' 'file name'				-> Output show of the words as part of anything
+* grep -iw 'word' 'file name'				-> Output show of the words as a word
+* grep -iwn 'word' 'file name'				->
+* grep -iwnv 'word' 'file name'				->
+* grep -inv 'word' 'file name'				->
+* wc 'file name'					-> Word Count
+
+## Output Format -> line_number word_number
+
+* wc -l 'file name'					-> Line Number Show
+* head 'file name'					-> Show First 10 Line Output
+* tail 'file name'  					-> Show Last 10 Line Output
